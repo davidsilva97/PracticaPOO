@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <div id="articulo"></div>
+    <button id="boton">Comprar</button>
+    <div id="venta">
+        <h2>Venta</h2>
+    </div>
+
+
+    <script>
+        let contenedor = document.getElementById("articulo");
+        let ventaContenedor = document.getElementById("venta");
+        let boton = document.getElementById("boton");
+
+        let articulo = {
+            nombre: "<h1>PlayStation 5</h1>",
+            descripcion: "<p>El nuevo PlayStation 5 revolucionará tu entretenimiento. Experimenta una velocidad sorprendente con una SSD de velocidad ultrarrápida, una inmersión más profunda con soporte para respuesta háptica, gatillos adaptativos y audio 3D, además de una generación completamente nueva de juegos de PlayStation. Disfruta de una frecuencia de imagen alta y fluida de hasta 120 fps para los juegos compatibles , con soporte para salida de 120 Hz en pantallas 4K. Las consolas PS5 admiten salida de 8K, para que puedas jugar en tu pantalla con resolución de 4320p. Conecta tu PlayStation VR a tu consola PS5 para disfrutar de los juegos de PS VR compatibles. </p>",
+            precio:`<h3>Precio: ${20}</h3>`,
+            cantidad: `<h3>Cantidad: ${1}</h3>`,
+            imagen: `<img src = "https://www.sanborns.com.mx/imagenes-sanborns-ii/1200/711719541769.jpg" style="height: 100px;">`
+            
+        }
+
+        let venta = {
+            articulos: `<p>Articulos en el carrito: 1</p>`,
+            precio: `Total. ${20}`,
+            id_cliente: `<p>idCliente: 234345</p>`,
+            correo:`<a>cliente@mail.com</a>`
+        }
+        contenedor.innerHTML =articulo.nombre+articulo.descripcion+articulo.precio+articulo.cantidad+articulo.imagen;
+
+        boton.addEventListener("click", () =>{
+            ventaContenedor.innerHTML= venta.articulos + venta.precio + venta.id_cliente + venta.correo;
+        })
+
+
+    </script>
+</body>
+</html>
